@@ -37,8 +37,8 @@ dependencies:
   flutter_modular: ^4.5.0
   google_fonts: ^2.3.1
   flutter_mobx: ^2.0.4
-  flutter_socket_io: ^0.6.0
-  scoped_model: ^1.1.0
+  socket_io_client: ^1.0.2
+  chat_bubbles: ^1.2.0
 
 dev_dependencies:
   flutter_test:
