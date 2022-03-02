@@ -113,6 +113,7 @@ class _HomePageState extends ModularState<HomePage, HomePageStore> {
                             return ChatBubble(
                               isMe: isEqual(),
                               message: message.message,
+                              author: message.name,
                             );
                           }).toList(),
                         ),

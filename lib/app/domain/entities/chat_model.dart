@@ -6,11 +6,11 @@ String chatModelToJson(ChatModel data) => json.encode(data.toJson());
 
 class ChatModel {
   String? id;
-  String? name;
+  String name;
   String message;
   ChatModel({
     this.id,
-    this.name,
+    required this.name,
     required this.message,
   });
 

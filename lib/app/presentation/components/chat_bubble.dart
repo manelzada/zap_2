@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class ChatBubble extends StatelessWidget {
   final bool isMe;
   final String message;
+  final String author;
 
-  const ChatBubble({Key? key, required this.isMe, required this.message})
+  const ChatBubble(
+      {Key? key,
+      required this.isMe,
+      required this.message,
+      required this.author})
       : super(key: key);
 
   @override
@@ -42,6 +47,11 @@ class ChatBubble extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
+                Text(
+                  '@$author',
+                  style: const TextStyle(
+                      fontStyle: FontStyle.italic, fontSize: 10),
+                ),
                 Text(
                   message,
                   textAlign: TextAlign.start,
