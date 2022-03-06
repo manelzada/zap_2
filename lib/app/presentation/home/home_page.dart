@@ -48,6 +48,15 @@ class _HomePageState extends ModularState<HomePage, HomePageStore> {
       });
       socket?.connect();
 
+      socket?.on('messageHistory', (messages) {
+        for (int i = 0; i < messages.length; i++) {
+          var teste = ChatModel.fromJson(messages[i]);
+          setStateIfMounted(() {
+            _messages.add(teste);
+          });
+        }
+      });
+
       socket?.on('message', (data) {
         var message = ChatModel.fromJson(data);
         setStateIfMounted(() {
